@@ -1,0 +1,91 @@
+<br>
+<br>
+<div class="container" >
+    <div class="row justify-content-md-center" >
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+
+               <!-- <li *ngFor="let item of links" class="page-item">
+                    <a class="page-link" [routerLink]="[item.id]">{{item.id}}</a>
+                </li>-->
+
+                <li *ngFor="let page of pages, let i = index" class="page-item">
+                    <a class="page-link" [routerLink]="[page.type,i]">{{i+1}}</a>
+                </li>
+
+
+                <!------------NEW_STEP_START--------------->
+                <li class="page-item">
+                    <!-- <button class="btn btn-primary" [routerLink]="['new']" >Next</button>-->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#id1">Add step</button>
+
+                    <div class="modal fade bd-example-modal-lg" tabindex="-1" id="id1" role="dialog"
+                         aria-labelledby="myLargeModalLabel"
+                         aria-hidden="true">
+
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <ul style="list-style-type: none">
+                                            <div class="row">
+                                                <li class="col">
+                                                    <div class="row " data-dismiss="modal">
+                                                        <div class="col-2 nav-link"><img src="images/ivideo36dp.png"
+                                                                                         width="25" height="25"></div>
+                                                        <a class="col-4 nav-link" [routerLink]="['video']">Video</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col">
+                                                    <div class="row" data-dismiss="modal">
+                                                        <div class="col-2"><img src="images/text256px.png" width="25"
+                                                                                height="25"></div>
+                                                        <a class="col-4 nav-link" [routerLink]="['text']">Text</a>
+                                                    </div>
+                                                </li>
+                                            </div>
+
+                                            <div class="row">
+                                                <li class="col">
+                                                    <div class="row" data-dismiss="modal">
+                                                        <div class="col-2"><img src="images/task256px.png" width="25"
+                                                                                height="25">
+                                                        </div>
+                                                        <a class="col-4 nav-link" [routerLink]="['task']">Task</a>
+                                                        <!--<div class="col-4">Task</div>-->
+                                                    </div>
+                                                </li>
+
+                                                <li class="col">
+                                                    <div class="row" data-dismiss="modal">
+                                                        <div class="col-2"><img src="images/test256px.png" width="25"
+                                                                                height="25"></div>
+                                                        <a class="col-4 nav-link" [routerLink]="['test']">Test</a>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!------------NEW_STEP_END--------------->
+            </ul>
+        </nav>
+    </div>
+    <br>
+
+    <router-outlet></router-outlet>
+
+
+    <div class="row justify-content-md-center" style="border-top: 1px solid #CDDC39;margin-top: 1%">
+
+        <div class="col offset-11">
+            <br>
+            <button type="button" class="btn btn-success " style="background-color: #8BC34A" (click)="onAddCourse()">Создать</button>
+        </div>
+    </div>
+</div>

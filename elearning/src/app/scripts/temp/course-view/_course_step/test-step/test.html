@@ -1,0 +1,27 @@
+<div class="container-fluid card card-block" style="width: 70% ">
+
+    <h3>Вопрос: </h3>
+    <div style="border-bottom: 1px solid #7149ff;margin-top: 2%; margin-bottom: 2%; font-family: Arial ;font-size: 15pt">
+        {{test.question}}
+    </div>
+
+    <div style="margin-top: 2%; margin-bottom: 2%; font-family: Arial ;font-size: 20pt">Оветы:</div>
+
+    <div *ngFor="let answer of user_test.answers ">
+        <input type="checkbox" style="margin:1%;" [checked]="answer.isCorrect"
+               (change)="answer.isCorrect=$event.target.checked">
+
+        {{ answer.answer}}
+    </div>
+
+
+    <div *ngIf="isClicked&&isCorrect"  ><img src="success-icon-10.png" width="55"
+               height="55"></div>
+
+    <div *ngIf="isClicked&&!isCorrect"><img src="Fail-Stamp-PNG-Clipart.png" width="55"
+               height="55"></div>
+
+
+    <div style="margin-top: 2%"> <button class="btn btn-success" (click)="onCheck( )" >Подтвердить</button> </div>
+
+</div>

@@ -1,0 +1,16 @@
+<div class="container-fluid card card-block" style="width: 70% ">
+
+    <h3>Вопрос: </h3>
+    <div style="border-bottom: 1px solid #7149ff;margin-top: 2%; margin-bottom: 2%; font-family: Arial ;font-size: 15pt">
+        {{test.question}}
+    </div>
+
+    <div style="margin-top: 2%; margin-bottom: 2%; font-family: Arial ;font-size: 20pt">Оветы:</div>
+
+    <div *ngFor="let answer of test.answers "><input type="checkbox" style="margin:1%;" [checked]="answer.isCorrect"
+                                                     disabled> {{ answer.answer}}
+    </div>
+
+
+</div>
+    

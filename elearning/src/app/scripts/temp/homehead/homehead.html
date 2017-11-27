@@ -1,0 +1,59 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">E-learning</h1>
+        <p> Демоснтрационный шаблон образовательного ресурса</p>
+        <!--  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <ul  style="list-style-type: none"><!--class="list-group"--> <!--style="list-style-type: none">-->
+
+        <li  *ngFor="let course of courses; let id = index">
+
+            <div class="row" ><!--style=" border-style: solid; padding: 2px; margin: 2px"-->
+                <div class="col-1">
+                    <img src="CD_222_2.png" width="150" height="150">
+                </div>
+                <div class="col">
+                    <div class="row" style="margin: 1%">
+                        Author : {{course.course_info.author}}
+                    </div>
+                    <div class="row" style="margin: 1%">
+                        <b>{{course.course_info.title}}</b>
+                    </div>
+                    <div class="row"><!--[routerLink]="['/course',id]"-->
+                        <button   (click)="toCourse(id)" type="button" class="btn btn-default confirm-button">Поступить</button>
+                    </div>
+                </div>
+            </div>
+
+        </li>
+    </ul>
+
+    <!--<ul class="list-group">
+
+
+        <li class="list-group-item" *ngFor="let course of courses_info">
+            <div class="box">
+                <div>
+                    <img src="CD_222_2.png">
+                </div>
+                <div class="course-info">
+                    <div>
+                        Author : {{course.author}}
+                    </div>
+                    <div>
+                        {{course.title}}
+                    </div>
+                    <button  routerLink="/course"  type="button" class="btn btn-default confirm-button">Поступить <span class="caret"></span></button>
+                </div>
+            </div>
+        </li>
+    </ul>-->
+</div>
+
+<!--
+
+<p><a [routerLink]="['/login']">Logout</a></p>-->

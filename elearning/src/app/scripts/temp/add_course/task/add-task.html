@@ -1,0 +1,25 @@
+<div class="container-fluid card card-block" style="width: 70%">
+    <div class="justify-content-center">
+
+        <div class="row" style=" background: #eee">
+            <div class="col-md-12">
+                <blockquote>
+                    <p>Добавить задачу</p>
+                    <footer> --Введите условие задачи. Ведите ответ</footer>
+                </blockquote>
+            </div>
+        </div>
+        <div class="row">
+            <textarea name="question" [(ngModel)]="question" placeholder="введите условие задачи" rows="5" style="width: 100%;margin-top: 1%;margin-bottom: 1%"> </textarea>
+        </div>
+        <div class="row">
+            <input class="answer-input" name="answer" [(ngModel)]="answer" type="text" style="width: 100%;margin-top:1%;margin-bottom: 2%"
+                   placeholder="  введите ответ"/>
+            <input class="answer-input" name="t_rate" [(ngModel)]="t_rate" type="text" style="width: 100%;margin-top:1%;margin-bottom: 2%"
+                   placeholder="  tolerance rate %"/>
+        </div>
+        <div class="row">
+            <button class="btn btn-success" (click)="onAdd()">Добавить</button>
+        </div>
+    </div>
+</div>

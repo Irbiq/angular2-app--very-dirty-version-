@@ -1,0 +1,25 @@
+<div class="container-fluid card card-block" style="width: 70% ">
+
+    <h3>Вопрос: </h3>
+    <div style="border-bottom: 1px solid #7149ff;margin-top: 2%; margin-bottom: 2%; font-family: Arial ;font-size: 15pt">
+        {{task.question}}
+    </div>
+
+    <div style="margin-top: 2%; margin-bottom: 2%; font-family: Arial ;font-size: 20pt">Ответ:</div>
+
+    <div >
+        <input class="answer-input" name="answer" [(ngModel)]="answer" type="text" style="width: 100%;margin-top:1%;margin-bottom: 2%"
+               placeholder="  введите ответ"/>
+    </div>
+
+    <div *ngIf="isClicked&&isCorrect"  ><img src="success-icon-10.png" width="55"
+                                             height="55"></div>
+
+    <div *ngIf="isClicked&&!isCorrect"><img src="Fail-Stamp-PNG-Clipart.png" width="55"
+                                            height="55"></div>
+
+    <div class="row" style="margin-top: 3%" >
+        <div class="col"> <button type="button" class="btn btn-primary" (click)="onCheck()">Проверить</button> </div>
+    </div>
+
+</div>

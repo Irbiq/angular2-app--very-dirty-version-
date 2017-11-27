@@ -1,0 +1,19 @@
+<div class="container-fluid card card-block" style="width: 70%">
+    <div class="justify-content-center">
+
+        <div class="row" style=" background: #eee">
+            <div class="col-md-12">
+                <blockquote>
+                    <p>Добавить текст</p>
+                    <footer> --Введите текст</footer>
+                </blockquote>
+            </div>
+        </div>
+        <div class="row">
+            <textarea placeholder="Введите текст" rows="8" style="width: 100%;margin-top: 1%;margin-bottom: 1%" [(ngModel)]="text"  > </textarea>
+        </div>
+        <div class="row" >
+            <button class="btn btn-success" style="margin-top: 2%" (click)="onAddText()" >Добавить</button>
+        </div>
+    </div>
+</div>

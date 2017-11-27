@@ -1,0 +1,13 @@
+
+<div class="container-fluid card card-block" style="width: 70%;" >
+<form class="form-inline" style="width: 50%;text-align: center!important;"  >
+    <div class="form-group ">
+      <!--  <label class="btn btn-primary">
+            Load video <input type="file" style="display: none;">
+        </label>-->
+        <input class="form-control" name="src" [(ngModel)]="src" type="text" placeholder="video url" >
+        <button type="submit" class="btn btn-success" (click)="onAdd()">Добавить</button>
+     </div>
+
+</form>
+</div>
